@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>git</title>
+</head>
+
+<body>
+
+    <h1>Learning Git</h1>
+
+    <script>
+        // currency convertor
+
+        const rates = {
+            USD: 1,
+            EUR: 0.9,
+            GBP: 0.8,
+            INR: 82
+        }
+
+        function currencyConvertor(amt, fc, tc) {
+
+            let amountInUsd = 0;
+            if (fc !== "USD") {
+                amountInUsd = amt / rates[fc]
+            } else {
+                amountInUsd = amt;
+            }
+
+            let convertedAmt = 0;
+            if (tc !== "USD") {
+                convertedAmt = amountInUsd * rates[tc];
+            } else {
+                convertedAmt = amountInUsd;
+            }
+
+
+            return convertedAmt;
+
+        }
+
+        console.log(currencyConvertor(100, "INR", "EUR"));
+    </script>
+</body>
+
+</html>
